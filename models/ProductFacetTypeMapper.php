@@ -158,16 +158,6 @@ class Model_Mapper_ProductFacetTypeMapper extends Model_Mapper_ProductFacetMappe
 				break;
 			case 10: return "tights";
 				break;
-			case 11: return "socks";
-				break;
-			case 12: return "cleaners-and-protectors";
-				break;
-			case 13: return "insoles";
-				break;
-			case 14: return "creams-and-polishes";
-				break;
-			case 15: return "boot-trees"; // tmp boot tree
-				break;
 		}
 	}
 
