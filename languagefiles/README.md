@@ -11,6 +11,4 @@ For example, in the UK we may use "ladies boots" but in the US for SEO we used
 We also had several language files, but just one of them (per language) 
 is shown in this folder, to get a sense of how this was implemented. 
 We previously used constants for some language files, but found that mutable structures
-like arrays were easier to manipulate because manipulation was sometimes required on 
-the language for certain sites (e.g. US overriding UK language variables in certain
-instances, plus more complex situations).
+like arrays were easier to manipulate because manipulation was sometimes required for for certain subsites (e.g. US overriding UK language variables in certain instances, plus more complex situations).
