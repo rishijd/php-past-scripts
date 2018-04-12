@@ -1,5 +1,8 @@
 <?php
-/* Class for filter/product facets, mapping to database. The non-standard "colour" filter also has a fetchAll_colours() function in this file used specifically for the colour facet. Other facets use the standard fetchAll() function. */
+/* Class for filter/product facets, mapping to database. 
+ * The non-standard "colour" filter also has a fetchAll_colours() function in this file used specifically for the colour facet. 
+ * Other facets use the standard fetchAll() function. 
+ */
 include_once("DataMapperAbstract.php");
 class Model_Mapper_ProductFacetMapper extends DataMapperAbstract  {
 	
