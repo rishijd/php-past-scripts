@@ -35,19 +35,19 @@ class Model_Mapper_ProductFacetMapper extends DataMapperAbstract  {
 		//the reason why we have a separate function for this, used by the constructor, is so that the extended COLOUR mapper class can override it as its URL column id is not the same as its columnid. (unlike the others:, e.g. "heelid" is passed by the URL too for filter URLs.
 		$this->column_id_for_url = $this->column_id;
 	}
-    public function __set($member, $value) {
-        /* The ID of the dataset is read-only
-        if ($member == "id") {
-            return;
-        } */
-        //if (isset($this->_tableData[$member])) {
-        $this->_tableData[$member] = $value;
-    }	
-    public function __get($member) {
-        if (isset($this->_tableData[$member])) {
-            return $this->_tableData[$member];
+        public function __set($member, $value) {
+            /* The ID of the dataset is read-only
+            if ($member == "id") {
+                return;
+            } */
+            //if (isset($this->_tableData[$member])) {
+            $this->_tableData[$member] = $value;
+        }	
+        public function __get($member) {
+            if (isset($this->_tableData[$member])) {
+                return $this->_tableData[$member];
+            }
         }
-    }
 	public function getDefault_param_sql_extra($landing_page=false) {
 		/*
 			@param: $landing_page : set as true, when this is landing page or any pages with products assigned to it (i.e. not the usual PLP pages).
@@ -276,7 +276,7 @@ class Model_Mapper_ProductFacetMapper extends DataMapperAbstract  {
 		return $ret_url_list;
 	}	
 	
-/* Specific filter type functions - Shoe type */
+	/* Specific filter type functions - Shoe type */
 	public function getProductShoeTypeByProductID($productid) {
 		/* 	pre: called by PDP to get one shoe type out that is linked with this $productid. We assume this $productid is of a "shoe" prodtypeid (4) only since these are only associated with shoe types. However this function is not limited to other product types should we need to use it for a similar purpose for ankle boots (for example, prodtypeid 9) in the future. 
 			post: returns the shoetypeid and description array
@@ -285,7 +285,7 @@ class Model_Mapper_ProductFacetMapper extends DataMapperAbstract  {
 		return $arr_prod_param_shoetype;
 	}
 
-/* Length filter */
+ 	/* Length filter */
 	public function getLengthKneeHighID() {
 		/* 
 		 * post: returns the KNEE HIGH filter ID (hard-coded, taken from our prod_param_length table, for usage by the list.php controller.
